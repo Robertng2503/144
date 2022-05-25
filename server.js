@@ -6,7 +6,7 @@ const exphbs = require('express-handlebars');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({ });
 
 // Have engine use handlebars template
 app.engine('handlebars', hbs.engine);
