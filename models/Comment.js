@@ -1,11 +1,12 @@
-const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const { Model, DataTypes } = require('sequelize');
+
 
 // Comment will inherit the methods of Model
 class Comment extends Model {}
 
-// Initialize
-comment.init(
+// Initialize Comment
+Comment.init(
     {
         id: {
             type: DataTypes.INTEGER,
