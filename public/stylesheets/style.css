@@ -7,7 +7,7 @@
   
   /* Header styles */
   header {
-    color: rgb(242, 255, 226);
+    color: black;
     background-color: transparent;
   }
   
@@ -26,7 +26,7 @@
   /* nav link syles */
   a {
     text-decoration: none;
-    color: rgb(242, 255, 226);
+    color: white;
     font-weight: bold;
     transition: color .1s;
   }
@@ -41,7 +41,7 @@
   }
   
   li {
-    background-color: rgb(242, 255, 226);
+    background-color: white;
     border: solid 5px black;
     margin: 10px;
   }
