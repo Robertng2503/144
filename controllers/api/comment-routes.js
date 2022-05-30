@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
+const { Comment } = require('../../models');
+
 
 // This will grab all comments
 router.get('/', (req, res) => {
@@ -35,7 +36,7 @@ router.delete('/:id', withAuth, (req, res) => {
   })
     .then(dbCommentData => {
       if (!dbCommentData) {
-        res.status(404).json({ message: 'No comment found!' });
+        res.status(404).json({ message: 'No comment found with this id!' });
         return;
       }
       res.json(dbCommentData);

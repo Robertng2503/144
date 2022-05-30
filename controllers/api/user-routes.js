@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 
-// grabs all the users
+// grabs all the user
 router.get('/', (req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] }
@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     });
 });
 
-// 
+//
 router.get('/:id', (req, res) => {
   User.findOne({
     attributes: { exclude: ['password'] },
@@ -23,11 +23,11 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ['id','title','post_url','created_at']
+        attributes: ['id', 'title', 'post_url', 'created_at']
       },
       {
         model: Comment,
-        attributes: ['id','comment_text','created_at'],
+        attributes: ['id', 'comment_text', 'created_at'],
         include: {
           model: Post,
           attributes: ['title']
@@ -37,7 +37,7 @@ router.get('/:id', (req, res) => {
   })
     .then(dbUserData => {
       if (!dbUserData) {
-        res.status(404).json({ message: 'No user was found!' });
+        res.status(404).json({ message: 'No user found with this id' });
         return;
       }
       res.json(dbUserData);
@@ -78,30 +78,27 @@ router.post('/login', (req, res) => {
     }
   }).then(dbUserData => {
     if (!dbUserData) {
-      res.status(400).json({ message: 'No user found with this email!' });
+      res.status(400).json({ message: 'No user with that email address!' });
       return;
     }
 
-    // Checks password
     const validPassword = dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res.status(400).json({ message: 'Sorry, Incorrect password!' });
+      res.status(400).json({ message: 'Incorrect password!' });
       return;
     }
 
     req.session.save(() => {
-
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
-      res.json({ user: dbUserData, message: 'You are logged in!' });
-
+  
+      res.json({ user: dbUserData, message: 'You are now logged in!' });
     });
   });
 });
 
-// 
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
@@ -123,7 +120,7 @@ router.put('/:id', (req, res) => {
   })
     .then(dbUserData => {
       if (!dbUserData) {
-        res.status(404).json({ message: 'No user was found!' });
+        res.status(404).json({ message: 'No user found with this id' });
         return;
       }
       res.json(dbUserData);
@@ -143,7 +140,7 @@ router.delete('/:id', (req, res) => {
   })
     .then(dbUserData => {
       if (!dbUserData) {
-        res.status(404).json({ message: 'No user was found!' });
+        res.status(404).json({ message: 'No user found with this id' });
         return;
       }
       res.json(dbUserData);
