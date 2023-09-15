@@ -31,6 +31,5 @@ This is a tech-blog application that allows each user to post blogs. It is both 
  - mysql2
  - sequelize
  - nodemon
-## Walkthrough 
-<a href="" target="_blank">Click Here for Walkthrough Video</a>
+
 
