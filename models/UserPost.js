@@ -2,10 +2,12 @@ const sequelize = require('../config/connection');
 const { Model, DataTypes } = require('sequelize');
 
 
-// UserPost will inherit from Model
+
 class UserPost extends Model {}
 
-// Initialize UserPost
+
+
+
 UserPost.init(
   {
     id: {

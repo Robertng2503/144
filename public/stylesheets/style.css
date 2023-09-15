@@ -5,25 +5,25 @@
     background-color: rgb(55, 77, 115);
   }
   
-  /* Header styles */
+  
   header {
     color: black;
     background-color: transparent;
   }
   
-  /* main styles */
+  
   main{
     background-color: rgb(55, 77, 115);
   }
   
-  /* nav styles */
+  
   nav {
     display: flex;
     justify-content: space-between;
     width: 500px;
   }
   
-  /* nav link syles */
+ 
   a {
     text-decoration: none;
     color: white;
@@ -35,7 +35,7 @@
     color: black;
   }
   
-  /* ordered list styles */
+ 
   ol {
     list-style-type: none;
   }
@@ -50,7 +50,7 @@
     margin-left: 5px;
   }
   
-  /* button styles */
+  
   button {
     background-color: #225ca3;
     border: 0;
@@ -66,7 +66,7 @@
     background-color: #3486eb;
   }
   
-  /* post header styles */
+  
   .post-header {
     display: flex;
     justify-content: space-between;
@@ -80,7 +80,7 @@
     padding: 0;
   }
   
-  /* textarea styles */
+
   textarea, input {
     padding: .5%;
     border-radius: 5px;
@@ -97,7 +97,7 @@
     min-height: 100px;
   }
   
-  /* form styles */
+ 
   form > div {
     margin-bottom: 2%;
   }
@@ -106,7 +106,7 @@
     display: block;
   }
   
-  /* wapper tag styles */
+ 
   .wrapper {
     width: 100%;
     min-height: 100%;
@@ -116,7 +116,9 @@
     flex-direction: column;
   }
   
-  /* header styles */
+
+
+ 
   header {
     border-bottom: 1px solid #ccc;
     display: flex;
@@ -129,7 +131,8 @@
     font-size: 25px;
   }
   
-  /* main styles */
+
+
   main {
     flex: 1;
     padding: 2% 4%;

@@ -5,14 +5,16 @@ const sequelize = require('../config/connection');
 // User will inherit from Model
 class User extends Model {
 
-  // Checks from password
+ 
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
 
-// Initialize User
+
+
+
 User.init(
   {
     id: {

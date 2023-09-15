@@ -4,6 +4,8 @@ const withAuth = require('../utils/auth');
 const { Post, User, Comment } = require('../models');
 
 
+
+
 // Get post for dashboard 
 router.get('/', withAuth, (req, res) => {
   console.log(req.session);

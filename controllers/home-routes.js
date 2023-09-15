@@ -8,6 +8,8 @@ router.get('/', (req, res) => {
   Post.findAll({
     attributes: ['id','post_contents','title','created_at',
 
+
+    
       [sequelize.literal('(SELECT COUNT(*) FROM user_post WHERE post.id = user_post.post_id)'), 'post_count']
     ],
     include: [

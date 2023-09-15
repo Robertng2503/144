@@ -46,6 +46,8 @@ async function loginFormHandler(event) {
         headers: { 'Content-Type': 'application/json' }
       });
   
+
+      
       if (response.ok) {
         document.location.replace('/dashboard/');
       } else {
@@ -54,6 +56,8 @@ async function loginFormHandler(event) {
     }
   }
   
+
+
   // Listening for login submit btn
   document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
   // Listening for signup submit btn

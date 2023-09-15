@@ -13,6 +13,8 @@ Post.belongsTo(User, {
   onDelete: 'SET NULL'
 });
 
+
+
 User.belongsToMany(Post, {
   through: UserPost,
   as: 'user_posts',
