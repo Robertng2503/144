@@ -7,7 +7,7 @@ This is a tech-blog application that allows each user to post blogs. It is both 
 - [Description](#description)
 - [Dependencies](#dependencies)
 - [Walkthrough](#walkthrough)
-- [License](#license)
+- 
 
 ## Installation
 
